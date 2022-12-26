@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <!--Nastavení jazyka-->
+        <meta charset="UTF-8">
+        <!--Zákaz ukládání stránky do cache paměti prohlížeče-->
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="expires" content="0">
+        <meta http-equiv="pragma" content="no-cache">
+
+        <!--Nastavení nadpisu, ikony a stylů-->
+        <title>Příkazy - Cd</title>
+        <link rel="icon" type="image/x-icon" href="../obrazky/ikona.ico">
+        <link rel="stylesheet" type="text/css" href="../styles.css">
+    </head>
+
+    <body>
+        <!--Navigační panel-->
+        <div class="panel">
+            <a href="../index.htm"><button>Hlavní stránka</button></a>
+            <a href="../videa.htm"><button>Videa</button></a>
+            <a href="../prikazy.htm"><button>Příkazy</button></a>
+            <a href="../programy.htm"><button>Programy</button></a>
+            <a href="../informace.htm"><button>Informace</button></a>
+            <a href="../faq.htm"><button>FAQ</button></a>
+            <a href="../vyvojari.htm"><button>Pro vývojáře</button></a>
+            <a href="../o-kanale.htm"><button>O kanále</button></a>
+            <a href="https://www.youtube.com/@GrizlikD" target="_blank"><img class="panel-ikony" src="../obrazky/youtube-logo.png" alt="YouTube"></a>
+            <a href="https://github.com/Grizlikk/GrizlikYT" target="_blank"><img class="panel-ikony" src="../obrazky/github-logo.png" alt="GitHub"></a>
+        </div>
+
+    <!--Obsah-->
+        <h1>CD</h1>
+        <p>Zobrazuje jméno aktuálního adresáře nebo změní aktuální adresář.</i></p>
+        <h4>Syntaxe</h4>
+        <p>cd [/d] [[Jednotka]:][Cesta adresáře]<br />
+        cd<br />
+        cd [..]<br />
+        cd [/]</p>
+        <table>
+            <tr>
+                <td><p><b>Parametr</b></p></td>
+                <td><p><b>Popis</b></p></td>
+            </tr>
+            <tr>
+                <td><p>[/d]</p></td>
+                <td><p>Změní aktuální jednotku i aktuální adresář jednotky.</p></td>
+            </tr>
+            <tr>
+                <td><p>[[Jednotka]:]</p></td>
+                <td><p>Určuje jednotku, která se má zobrazit nebo ji změní (pokud se liší od aktuální jednotky).</p></td>
+            </tr>
+            <tr>
+                <td><p>[Cesta adresáře]</p></td>
+                <td><p>Určuje cestu k adreáři, který se má zobrazit nebo změnit.</p></td>
+            </tr>
+            <tr>
+                <td><p>[..]</p></td>
+                <td><p>Určuje, že chcete přejít do nadřazeného adresáře.</p></td>
+            </tr>
+            <tr>
+                <td><p>[/]</p></td>
+                <td><p>Změní aktuální cestu k adresáři na výchozí adresář (C:\)</p></td>
+            </tr>
+            <tr>
+                <td><p>/?</p></td>
+                <td><p>Zobrazuje nápovědu k tomuto příkazu.</p></td>
+            </tr>
+        </table>
+
+        <!--Další poznámky k příkazu-->
+        <h4>Poznámky</h4>
+        <ul>
+            <li><p><i>[Cesta adresáře]</i> může obsahovat mezery, i když v takovémto případě byste měli úplnou cestu uzavřít do dvojitých uvozovek ("cesta s mezerou"). I když však uvozovky nenapíšete, program by měl fungovat. Například: <i>cd dokumenty\složka s mezerou</i> se zpracuje správně, přestože cesta není uzavřena v uvozovkách.</p></li>
+            <li><p>Všimněte si, že se v Batchi pro cestu k souborům nebo adresářům používají obrácené lomítka.</p></li>
+        </ul>
+
+        <!--Příklady použití příkazu-->
+        <h4>Příklady</h4>
+        <p>Chcete-li se vrátit do kořenového adresáře, zadejte:</p>
+        <pre><code>
+    cd \
+        </code></pre>
+        <p>Chcete-li jít do adresáře <i>dokumenty</i>, zadejte:</p>
+        <pre><code>
+    cd dokumenty
+        </code></pre>
+        <p>Chcete-li jít do adresáře <i>System32</i> na jednotce <i>C:</i>, zadejte:</p>
+        <pre><code>
+    cd C:\Windows\System32
+        </code></pre>
+        <p>Chcete-li se vrátit do nadřazeného adresáře, zadejte:</p>
+        <pre><code>
+    cd ..
+        </code></pre>
+        <p>Chcete-li vypsat cestu k aktuálnímu adresáři, zadejte:</p>
+        <pre><code>
+    echo %cd%
+        </code></pre>
+        <p>Chcete-li přejít na jednotku <i>D:</i>, zadejte:</p>
+        <pre><code>
+    D:
+        </code></pre>
+        <p>A když chcete přejít na jednotku <i>D:</i> a zároveň do složky <i>Slozka</i>, zadejte:</p>
+        <pre><code>
+    cd /d D:\Slozka
+        </code></pre>
+
+        <!--Video ukázka-->
+        <br />
+        <h4>Video ukázka</h4>
+        <div><video controls><source src="video_ukazky/cd.mp4" type="video/mp4"></video></div>
+        <br />
+
+        <!--Patička-->
+        <br />
+        <footer class="panel">
+            <div>
+                <p>&copy; 2022 <a href="https://www.youtube.com/@GrizlikD">Grizlik :D</a> Všechna práva vyhrazena.</p>
+            </div>
+        </footer>
+
+    </body>
+</html>
